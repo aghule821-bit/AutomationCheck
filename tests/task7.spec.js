@@ -23,8 +23,8 @@ test('02PIM Verification',async({page})=>{
 });
 
 test('03Leave Verification',async({page})=>{
-    await page.locator('a.oxd-main-menu-item.active').click();
-    await expect (page.locator('h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module')).toBeVisible();
+    await page.locator('a').filter({ hasText: 'Leave' }).first().click();
+    await expect (page.getByRole('heading', { name: 'Leave'}).first()).toBeVisible();
 });
 
 
