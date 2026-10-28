@@ -7,7 +7,7 @@ await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
 await page.getByPlaceholder('Password').fill('admin123');
 page.getByRole('button', { name: 'Login' }).click();
 })
-test('Admin verifitcation',async({page})=>{
+test('Admin verifitcation',{tag :"@smoke"},async({page})=>{
 
     
 })
