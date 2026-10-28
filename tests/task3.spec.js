@@ -7,6 +7,9 @@ await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/lo
     await page.getByRole('button', { name: 'Login' }).click();    
     await page.waitForLoadState('networkidle');
 });
+test.afterEach(async ({ page }) => {
+    
+    });
 test('01-Login Verification',async({page})=>{
     await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible();
 });
